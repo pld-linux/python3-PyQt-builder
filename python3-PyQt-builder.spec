@@ -10,6 +10,7 @@ Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_na
 URL:		https://www.riverbankcomputing.com/software/pyqt/
 BuildRequires:	python3-devel
 BuildRequires:	python3-setuptools
+BuildRequires:	rpmbuild(macros) >= 1.714
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
