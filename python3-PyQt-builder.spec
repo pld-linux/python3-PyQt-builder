@@ -1,12 +1,12 @@
 %define		pypi_name	PyQt-builder
 Summary:	The PEP 517 compliant PyQt build system
 Name:		python3-PyQt-builder
-Version:	1.15.0
+Version:	1.15.1
 Release:	1
 License:	BSD
 #Source0Download: https://pypi.org/simple/PyQt-builder
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	280e427ad991db84e50b86e150503548
+# Source0-md5:	bbb1ab98658f0f8d7f7d612eb6499376
 URL:		https://www.riverbankcomputing.com/software/pyqt/
 BuildRequires:	python3-devel
 BuildRequires:	python3-setuptools
