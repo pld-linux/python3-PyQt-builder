@@ -2,7 +2,7 @@
 Summary:	The PEP 517 compliant PyQt build system
 Name:		python3-PyQt-builder
 Version:	1.16.4
-Release:	1
+Release:	2
 License:	BSD
 #Source0Download: https://pypi.org/simple/PyQt-builder
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_name}-%{version}.tar.gz
@@ -37,8 +37,6 @@ EOF
 %install
 rm -rf $RPM_BUILD_ROOT
 %py3_install
-
-%{__rm} -r $RPM_BUILD_ROOT%{py3_sitescriptdir}/pyqtbuild/bundle/dlls
 
 %clean
 rm -rf $RPM_BUILD_ROOT
