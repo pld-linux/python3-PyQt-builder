@@ -1,5 +1,6 @@
 %define		pypi_name	pyqt_builder
 Summary:	The PEP 517 compliant PyQt build system
+Summary(pl.UTF-8):	System budowania PyQt zgodny z PEP 517
 Name:		python3-PyQt-builder
 Version:	1.16.4
 Release:	2
@@ -18,8 +19,16 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 PyQt-builder is the PEP 517 compliant build system for PyQt and
 projects that extend PyQt. It extends the sip build system and uses
 Qt's qmake to perform the actual compilation and installation of
-extension modules.Projects that use PyQt- builder provide an
+extension modules. Projects that use PyQt-builder provide an
 appropriate pyproject.toml file and an optional project.py.
+
+%description -l pl.UTF-8
+PyQt-builder to zgodny z PEP 517 system budowania dla PyQt oraz
+projektów rozszerzających PyQt. Rozszerza system budowania sip i
+wykorzystuje program qmake z Qt, aby wykonać właściwą kompilację i
+instalację modułów rozszerzeń. Projekty wykorzystujące pakiet
+PyQt-builder dostarczają odpowiedni plik pyproject.toml oraz
+opcjonalnie project.py.
 
 %prep
 %setup -q -n %{pypi_name}-%{version}
