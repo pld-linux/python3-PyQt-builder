@@ -2,12 +2,12 @@
 Summary:	The PEP 517 compliant PyQt build system
 Summary(pl.UTF-8):	System budowania PyQt zgodny z PEP 517
 Name:		python3-PyQt-builder
-Version:	1.18.0
-Release:	3
+Version:	1.18.1
+Release:	1
 License:	BSD
 #Source0Download: https://pypi.org/simple/PyQt-builder
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_name}-%{version}.tar.gz
-# Source0-md5:	0f633ebfec956ff548e2ed76ffaea4bb
+# Source0-md5:	e5d7f93ee17233598861621166ead953
 URL:		https://www.riverbankcomputing.com/software/pyqt/
 BuildRequires:	python3-devel >= 1:3.7
 BuildRequires:	python3-setuptools
