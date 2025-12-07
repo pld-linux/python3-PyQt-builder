@@ -9,10 +9,12 @@ License:	BSD
 Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_name}-%{version}.tar.gz
 # Source0-md5:	7c4fab6b6fac3a3bf78c08423d4d02d6
 URL:		https://www.riverbankcomputing.com/software/pyqt/
+BuildRequires:	python3-build
 BuildRequires:	python3-devel >= 1:3.7
+BuildRequires:	python3-installer
 BuildRequires:	python3-setuptools
 BuildRequires:	rpm-pythonprov
-BuildRequires:	rpmbuild(macros) >= 1.714
+BuildRequires:	rpmbuild(macros) >= 2.044
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,17 +38,12 @@ opcjonalnie project.py.
 
 %{__rm} -r PyQt_builder.egg-info
 
-cat > setup.py <<EOF
-from setuptools import setup
-setup(version='%{version}')
-EOF
-
 %build
-%py3_build
+%py3_build_pyproject
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%py3_install
+%py3_install_pyproject
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -56,4 +53,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/pyqt-bundle
 %attr(755,root,root) %{_bindir}/pyqt-qt-wheel
 %{py3_sitescriptdir}/pyqtbuild
-%{py3_sitescriptdir}/PyQt_builder-%{version}-py*.egg-info
+%{py3_sitescriptdir}/pyqt_builder-%{version}.dist-info
