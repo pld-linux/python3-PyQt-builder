@@ -10,9 +10,10 @@ Source0:	https://files.pythonhosted.org/packages/source/P/PyQt-builder/%{pypi_na
 # Source0-md5:	7c4fab6b6fac3a3bf78c08423d4d02d6
 URL:		https://www.riverbankcomputing.com/software/pyqt/
 BuildRequires:	python3-build
-BuildRequires:	python3-devel >= 1:3.7
+BuildRequires:	python3-devel >= 1:3.8
 BuildRequires:	python3-installer
-BuildRequires:	python3-setuptools
+BuildRequires:	python3-setuptools >= 1:77
+BuildRequires:	python3-setuptools_scm >= 8
 BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 2.044
 BuildArch:	noarch
